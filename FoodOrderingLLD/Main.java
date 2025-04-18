@@ -16,6 +16,9 @@ public class Main {
         System.out.println(order.amount);
         DeliveryPartner dp=new DeliveryPartner("Rohan", "001", 4.6, order);
         dp.assignPartner();
+        dp.completeDelivery();
+        
+
 
     }
     static void addUsers(){

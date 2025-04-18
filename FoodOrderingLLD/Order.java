@@ -5,6 +5,7 @@ public class Order {
     Restaurant restaurant;
     int amount;
     List<MenuItem> items;
+    OrderDeliveryStatus orderDeliveryStatus;
 
     Order(String orderId, User user, Restaurant restaurant, int amount, List<MenuItem> items){
         this.orderId=orderId;
@@ -12,6 +13,7 @@ public class Order {
         this.restaurant=restaurant;
         this.amount=amount;
         this.items=items;
+        this.orderDeliveryStatus=OrderDeliveryStatus.PLACED;
     }
 
     public String getOrderId() {

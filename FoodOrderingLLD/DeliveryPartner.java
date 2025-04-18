@@ -15,7 +15,14 @@ public class DeliveryPartner {
 
     public void assignPartner() {
         System.out.println(name+" will be delivering your order "+order.orderId);
+        order.orderDeliveryStatus=OrderDeliveryStatus.INDELIVERY;
         this.deliveryPartnerStatus = DeliveryPartnerStatus.OCCUPIED;
+    }
+
+    public void completeDelivery(){
+        order.orderDeliveryStatus=OrderDeliveryStatus.DELIVERED;
+        this.deliveryPartnerStatus=DeliveryPartnerStatus.VACANT;
+        System.out.println("DELIVERY IS COMPLETE");
     }
 
     public void releasePartner() {
